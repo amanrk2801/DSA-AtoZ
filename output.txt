@@ -1,0 +1,2 @@
+Value of x: 5
+Value of y: 8
