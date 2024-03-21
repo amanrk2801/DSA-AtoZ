@@ -1,2 +1,1 @@
-Value of x: 5
-Value of y: 8
+2 11 2 43 1 1 7 5 
