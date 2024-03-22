@@ -12,8 +12,11 @@ using namespace std;
 // 7 5 2 11 2 43 1 1 -> (8: size of the array)
 // 2 -> value of d rotation
 
-// Output: 2 11 2 43 1 1 7 5 
-void leftRotate(int arr[], int n, int d)
+// Output: 2 11 2 43 1 1 7 5
+
+// Time Complexity : O(d) + O(n-d) + O(d) => O(n+d) => O(n)
+// Space Complexity : O(d)
+void leftRotateX(int arr[], int n, int d)
 {
     d = d % n;
     int temp[d];
@@ -27,8 +30,19 @@ void leftRotate(int arr[], int n, int d)
     }
     for (int i = n - d; i < n; i++) // O(d)
     {
-        arr[i] = temp[i -(n-d)];
+        arr[i] = temp[i - (n - d)];
     }
+}
+
+// optimized approach without using the temporary array use reverse function
+// Time Complexity : O(n)
+// Space Complexity : O(1)
+
+void leftRotateY(int arr[], int n, int d)
+{
+    reverse(arr, arr + d);
+    reverse(arr + d, arr + n);
+    reverse(arr, arr + n);
 }
 
 int main()
@@ -42,7 +56,7 @@ int main()
     }
     int d;
     cin >> d;
-    leftRotate(arr, n, d);
+    leftRotateY(arr, n, d);
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
