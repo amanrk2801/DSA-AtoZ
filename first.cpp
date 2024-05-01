@@ -7,5 +7,5 @@ int main()
 }
 
 // terminal
-// g++ hello.cpp -o hello
-// ./hello
+// g++ first.cpp -o first
+// ./first
