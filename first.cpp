@@ -4,7 +4,7 @@ int main()
 {
     int x;
     cin>>x;
-    cout<<"Hello, World "<<x<<endl;
+    cout<<"Hello "<<x<<endl;
     for(int i = 0; i<10; i++){
         cout<<i<<endl;
     }
