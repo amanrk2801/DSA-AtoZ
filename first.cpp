@@ -14,3 +14,7 @@ int main()
 // terminal
 // g++ first.cpp -o first
 // ./first
+
+// or
+
+// ctrl + Shift + B
